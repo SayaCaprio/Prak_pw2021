@@ -1,4 +1,4 @@
-<?php 
+<?php
 require 'php/functions.php';
 $Hijab = query("SELECT * FROM hijab");
 ?>
@@ -33,19 +33,19 @@ $Hijab = query("SELECT * FROM hijab");
         <tbody>
             <?php $i = 1; ?>
             <?php foreach ($Hijab as $kerudung) : ?>
-            <tr>
-                <td><?= $i; ?></td>
-                <td><img width="220px" src="assets/<?= $kerudung['img']; ?>" alt=""></td>
-                <td>
-                    <a href="php/detail.php?id=<?= $kerudung['id']; ?>">
-                        <?= $kerudung["nama"]; ?>
-                    </a>
-                </td>
-                <td><?= $kerudung['informasi_produk']; ?></td>
-                <td><?= $kerudung['jenis']; ?></td>
-                <td>Rp. <?= $kerudung['harga']; ?></td>
-            </tr>
-            <?php $i++; ?>
+                <tr>
+                    <td><?= $i; ?></td>
+                    <td><img width="220px" src="assets/<?= $kerudung['img']; ?>" alt=""></td>
+                    <td>
+                        <a href="php/detail.php?id=<?= $kerudung['id']; ?>">
+                            <?= $kerudung["nama"]; ?>
+                        </a>
+                    </td>
+                    <td><?= $kerudung['informasi_produk']; ?></td>
+                    <td><?= $kerudung['jenis']; ?></td>
+                    <td>Rp. <?= $kerudung['harga']; ?></td>
+                </tr>
+                <?php $i++; ?>
             <?php endforeach; ?>
         </tbody>
     </table>

@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.0
+-- version 5.0.4
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 14, 2021 at 05:43 PM
--- Server version: 10.4.18-MariaDB
--- PHP Version: 8.0.3
+-- Generation Time: May 05, 2021 at 02:11 PM
+-- Server version: 10.4.17-MariaDB
+-- PHP Version: 8.0.0
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -41,7 +41,7 @@ CREATE TABLE `hijab` (
 --
 
 INSERT INTO `hijab` (`id`, `img`, `nama`, `informasi_produk`, `jenis`, `harga`) VALUES
-(2, 'hijab2.jpg', 'Hannah Set Peach', 'Special Anniversary Edition', 'jembut', 224000);
+(2, 'hijab2.jpg', 'Hannah Set Peach', 'Special Anniversary Edition', 'catton', 224000);
 
 --
 -- Indexes for dumped tables
@@ -61,7 +61,7 @@ ALTER TABLE `hijab`
 -- AUTO_INCREMENT for table `hijab`
 --
 ALTER TABLE `hijab`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

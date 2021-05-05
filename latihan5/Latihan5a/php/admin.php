@@ -1,4 +1,4 @@
-<?php 
+<?php
 require 'functions.php';
 $Hijab = query("SELECT * FROM hijab");
 ?>
@@ -31,21 +31,19 @@ $Hijab = query("SELECT * FROM hijab");
         <tbody>
             <?php $i = 1; ?>
             <?php foreach ($Hijab as $kerudung) : ?>
-            <tr>
-                <td><?= $i; ?></td>
-                <td>
-                    <a href=""><button
-                            style="border: none; padding: 5px 13px; background-color: teal; color: white; margin-bottom: 5px; border-radius: 2px;">Ubah</button></a>
-                    <a href=""><button
-                            style="border: none; padding: 5px 10px; background-color: red; color: white; border-radius: 2px;">Hapus</button></a>
-                </td>
-                <td><img width="220px" src="../assets/<?= $kerudung['img']; ?>" alt=""></td>
-                <td><?= $kerudung['nama']; ?></td>
-                <td><?= $kerudung['informasi_produk']; ?></td>
-                <td><?= $kerudung['jenis']; ?></td>
-                <td><?= $kerudung['harga']; ?></td>
-            </tr>
-            <?php $i++; ?>
+                <tr>
+                    <td><?= $i; ?></td>
+                    <td>
+                        <a href=""><button style="border: none; padding: 5px 13px; background-color: teal; color: white; margin-bottom: 5px; border-radius: 2px;">Ubah</button></a>
+                        <a href=""><button style="border: none; padding: 5px 10px; background-color: red; color: white; border-radius: 2px;">Hapus</button></a>
+                    </td>
+                    <td><img width="220px" src="../assets/<?= $kerudung['img']; ?>" alt=""></td>
+                    <td><?= $kerudung['nama']; ?></td>
+                    <td><?= $kerudung['informasi_produk']; ?></td>
+                    <td><?= $kerudung['jenis']; ?></td>
+                    <td><?= $kerudung['harga']; ?></td>
+                </tr>
+                <?php $i++; ?>
             <?php endforeach; ?>
         </tbody>
     </table>

@@ -1,11 +1,11 @@
 <?php
-if(!isset($_GET['id'])){
+if (!isset($_GET['id'])) {
     header("location: ../index.php");
     exit;
 }
 
 require '../php/function.php';
-$id=$_GET["id"];
+$id = $_GET["id"];
 $hijab = query("SELECT * FROM hijab WHERE id = $id")[0];
 ?>
 <!DOCTYPE html>
@@ -19,16 +19,16 @@ $hijab = query("SELECT * FROM hijab WHERE id = $id")[0];
     <link rel="stylesheet" href="https://cdn.metroui.org.ua/v4.3.2/css/metro-all.min.css">
     <link rel="stylesheet" href="../css/style.css">
 
-    <title>Ibnu Rusdianto</title>
+    <title>caprio</title>
 </head>
 
 <body>
     <div class="container">
         <div class="detail">
             <img class="image" src="../assets/<?= $hijab['img'] ?>" alt="">
-            <h3><?= $hijab['nama']?> <?= $hijab['informasi produk']?></h3>
+            <h3><?= $hijab['nama'] ?> <?= $hijab['informasi produk'] ?></h3>
             <hr>
-            <h6>Brand : <?= $hijab['jenis']?> | Price : Rp.<?= $hijab['harga']?></h6>
+            <h6>Brand : <?= $hijab['jenis'] ?> | Price : Rp.<?= $hijab['harga'] ?></h6>
             <a href="../index.php"><button class="button success"> Back</button> </a>
         </div>
     </div>
